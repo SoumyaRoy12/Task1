@@ -1,0 +1,37 @@
+                    /*Task1*/
+
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+int
+main ()
+{
+  srand (0);
+  int randomnumber = rand () % 100 + 1;
+  int userguess = 0;
+  int attempts = 0;
+  cout << "welcome to the number guessing game !" << endl;
+  cout << "I have selected a number between 1 and 100." << endl;
+  while (userguess != randomnumber)
+	{
+	  cout << "please enter your name: ";
+	  cout << "please enter your guess: ";
+	  cin >> userguess;
+	  attempts++;
+	  if (userguess > randomnumber)
+		{
+		  cout << "your guess is too high ,please try again." << endl;
+		}
+	  else if (userguess < randomnumber)
+		{
+		  cout << "your guess is too low ,please try again." << endl;
+		}
+	  else
+		{
+		  cout << "congratulations! you guessed the correct number." << endl;
+		  break;
+		}
+	}
+  return 0;
+
+}
